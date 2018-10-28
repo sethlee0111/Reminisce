@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Reminisce</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="no_loc_error">No Location Data</string>
+    <string name="no_context_error">No Context Data</string>
+    <string name="delete_context">Take everything completely out of context?</string>
+    <string name="delete_photo">Erase all your precious memory?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>
