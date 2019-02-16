@@ -5,7 +5,25 @@
     <string name="no_context_error">No Context Data</string>
     <string name="delete_context">Take everything completely out of context?</string>
     <string name="delete_photo">Erase all your precious memory?</string>
+    <string name="menu_all_image">All Images</string>
+    <string name="menu_feed_data">Feed Test Dataset</string>
+    <string name="menu_delete_context">Delete All Context</string>
+    <string name="menu_delete_images">Delete All Images</string>
+    <string name="menu_manual_context">Modify Current Context</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="set_time">Set Time</string>
+    <string name="set_date">Set Date</string>
+    <string name="vacant_time">00:00 AM</string>
+    <string name="display_time">%1$d:%2$d</string>
+    <string name="display_date">%1$d %2$d %3$d</string>
+    <string name="ble_not_supported">"No BLE Service"</string>
+    <string-array name="weather_array">
+        <item>Clear</item>
+        <item>Clouds</item>
+        <item>Rain</item>
+        <item>Snow</item>
+    </string-array>
 
 </resources>
+

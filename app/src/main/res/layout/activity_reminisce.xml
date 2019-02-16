@@ -4,55 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReminisceActivity">
+    android:background="#ffffff"
+    tools:context=".activities.ReminisceActivity">
 
     <ImageView
-        android:id="@+id/Remini1"
-        android:layout_width="196dp"
-        android:layout_height="189dp"
+        android:id="@+id/remini_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/boromir"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_report_image" />
+        app:layout_constraintTop_toBottomOf="@+id/locView" />
 
     <ImageView
-        android:id="@+id/Remini3"
-        android:layout_width="116dp"
-        android:layout_height="121dp"
+        android:id="@+id/imageView2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/Remini1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_report_image" />
-
-    <ImageView
-        android:id="@+id/Remini2"
-        android:layout_width="116dp"
-        android:layout_height="121dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/Remini1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_report_image" />
-
-    <ImageView
-        android:id="@+id/Remini4"
-        android:layout_width="145dp"
-        android:layout_height="123dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:src="@drawable/leaf_grey"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/timeView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/time_grey"
+        app:layout_constraintEnd_toStartOf="@+id/neiView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/locView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/neiView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/friend_grey"
+        app:layout_constraintEnd_toStartOf="@+id/wedView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/timeView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/wedView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/weather_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/neiView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/locView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/location_grey"
+        app:layout_constraintEnd_toStartOf="@+id/timeView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Remini1"
-        app:srcCompat="@android:drawable/ic_menu_report_image" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loc_toggle"
+        android:layout_width="64dp"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="@+id/locView"
+        app:layout_constraintTop_toBottomOf="@+id/locView"
+        app:srcCompat="@color/disabled" />
+
+    <ImageView
+        android:id="@+id/time_toggle"
+        android:layout_width="64dp"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="@+id/timeView"
+        app:layout_constraintTop_toBottomOf="@+id/timeView"
+        app:srcCompat="@color/enabled" />
+
+    <ImageView
+        android:id="@+id/friend_toggle"
+        android:layout_width="64dp"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="@+id/neiView"
+        app:layout_constraintTop_toBottomOf="@+id/neiView"
+        app:srcCompat="@color/enabled" />
+
+    <ImageView
+        android:id="@+id/weather_toggle"
+        android:layout_width="64dp"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="@+id/wedView"
+        app:layout_constraintTop_toBottomOf="@+id/wedView"
+        app:srcCompat="@color/enabled" />
+
+    <LinearLayout
+    android:id="@+id/ReminiProgress"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ProgressBar
+    android:id="@+id/pbReminiProgress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

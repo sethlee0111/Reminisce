@@ -14,7 +14,7 @@ public abstract class ContextDatabase extends RoomDatabase {
 
     private static volatile ContextDatabase INSTANCE;
 
-    static ContextDatabase getDatabase(final Context context) {
+    public static ContextDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (ContextDatabase.class) {
                 if (INSTANCE == null) {

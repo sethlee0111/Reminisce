@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/nav_gallery"
+        android:checkable="false"
+        android:title="@string/menu_all_image" />
+    <item
+        android:id="@+id/nav_move_context"
+        android:checkable="false"
+        android:title="@string/menu_manual_context" />
+    <item
+        android:id="@+id/nav_feed_data"
+        android:checkable="false"
+        android:title="@string/menu_feed_data" />
+    <item
+        android:id="@+id/nav_delete_images"
+        android:checkable="false"
+        android:title="@string/menu_delete_images" />
+    <item
+        android:id="@+id/nav_delete_context"
+        android:checkable="false"
+        android:title="@string/menu_delete_context" />
+</menu>

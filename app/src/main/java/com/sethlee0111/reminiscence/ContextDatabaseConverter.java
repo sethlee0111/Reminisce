@@ -1,5 +1,6 @@
 package com.sethlee0111.reminiscence;
 
+import com.sethlee0111.contextdatabase.*;
 import android.arch.persistence.room.TypeConverter;
 import android.location.Location;
 
@@ -24,6 +25,12 @@ public class ContextDatabaseConverter {
     }
 
     @TypeConverter
+    public static ArrayList<String> fromStringToNeighbor(String value) {
+        Type arrType = new TypeToken<ArrayList<String>>() {}.getType();
+        return new Gson().fromJson(value, arrType);
+    }
+
+    @TypeConverter
     public static String fromLocation(Location location) {
         Gson gson = new Gson();
         String json = gson.toJson(location);
@@ -33,6 +40,12 @@ public class ContextDatabaseConverter {
     public static String fromCalendar(Calendar calendar) {
         Gson gson = new Gson();
         String json = gson.toJson(calendar);
+        return json;
+    }
+    @TypeConverter
+    public static String fromNeighbor(ArrayList<String> neighbor) {
+        Gson gson = new Gson();
+        String json = gson.toJson(neighbor);
         return json;
     }
 }
